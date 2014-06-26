@@ -7,3 +7,17 @@
     color: red;
   }
 }
+
+header {
+  @include clearfix;
+  width: 100%;
+}
+
+section {
+  @include outer-container;
+  &.wide {
+    max-width: 55em;
+  }
+}
+
+img {width: 100%;}
