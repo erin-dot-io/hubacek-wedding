@@ -20,4 +20,4 @@ gem "neat"
 gem "jquery-middleman"
 
 # heroku build stuff
-gem 'rack-contrib'
+gem "rack-contrib"
