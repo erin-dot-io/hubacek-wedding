@@ -1,0 +1,9 @@
+@import 'init';
+
+//// SHAME - random styles go here. REFACTOR & OBJECTIFY! :) ////
+
+.poo {
+  @include media($desktop) {
+    color: red;
+  }
+}
