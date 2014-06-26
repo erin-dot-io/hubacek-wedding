@@ -2,6 +2,8 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
+ruby "2.0.0"
+
 # Middleman
 gem "middleman", "~>3.2.2"
 gem "middleman-favicon-maker"
