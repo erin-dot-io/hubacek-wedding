@@ -29,3 +29,11 @@ dl {
     margin: 0;
   }
 }
+
+ul {
+  font-size: $base-font-size * 0.85;
+  text-transform: uppercase;
+  line-height: $base-line-height * 0.95;
+  margin-bottom: $base-line-height;
+  &:last-child {margin-bottom: 0;}
+}

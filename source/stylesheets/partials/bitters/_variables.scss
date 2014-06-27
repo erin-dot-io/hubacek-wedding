@@ -3,20 +3,26 @@
 $sans-serif: $helvetica;
 $serif: $georgia;
 
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
+$body-font: "aktiv-grotesk-std", Helvetica, "Arial Black", sans-serif;
+$header-font: "halogen", Helvetica, "Arial", sans-serif;
+
+$base-font-family: $body-font;
+$header-font-family: $header-font;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
 $base-font-size: 1em;
 $base-line-height: $base-font-size * 1.5;
 $base-border-radius: em(3);
+$base-section-margin: $base-line-height * 2.2;
+$base-divider-margin: $base-line-height * 3.2;
 
 // Colors
 ///////////////////////////////////////////////////////////////////////////////
 
 $blue: #477DCA;
-$dark-gray: #333;
+$yellow: #d1c1a3;
+$dark-gray: #181818;
 $medium-gray: #999;
 $light-gray: #DDD;
 $light-red: #FBE3E4;
@@ -32,12 +38,16 @@ $base-accent-color: $blue;
 
 //  Text Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$hover-link-color: darken($yellow, 15);
 
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: $dark-gray;
 
 // Flash Colors
 $error-color: $light-red;
 $notice-color: $light-yellow;
 $success-color: $light-green;
+
+// Background Colors
+$base-bg-color: $dark-gray;
+$alt-bg-color: $yellow;
