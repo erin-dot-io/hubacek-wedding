@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 h1 {
@@ -28,8 +29,12 @@ h2 {
 
 h3 {
   font-family: $header-font-family;
-  font-size: $base-font-size * 1.4; // 16 * 1.75 = 28px
+  font-size: $base-font-size * 1.2; // 16 * 1.75 = 28px
   letter-spacing: 1px;
+  @include transform(scale(1.2,1));
+  footer & {
+    color: $base-body-color;
+  }
 }
 
 h4 {
@@ -73,7 +78,12 @@ hr {
   border-right: none;
   border-top: none;
   margin: $base-line-height 0 0;
-  &.space {border-width: 0;}
+  &.space {
+    @include clearfix;
+    border-width: 0;
+    margin: $base-line-height 0;
+  }
+  footer & {border-bottom-color: $base-body-color;}
 }
 
 img {

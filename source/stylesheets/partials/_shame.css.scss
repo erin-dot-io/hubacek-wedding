@@ -38,13 +38,25 @@ section {
     margin-top: $base-divider-margin * 0.6;
     margin-bottom: $base-divider-margin;
   }
+  @include media($tablet) {
+    @include box-sizing(content-box);
+    padding: 0 $base-line-height * 1.5;
+    &.wide {padding: 0 $base-line-height / 2;}
+    &.divider {padding: 0 $base-line-height / 2;}
+  }
 }
 
 .title-info {
   position: relative;
   z-index: 10;
+  @include media($tablet) {
+    .title-image {padding: 0 $base-line-height * 2;}
+  }
 }
 
-img {width: 100%;}
+img {
+  width: 100%;
+  margin-bottom: $base-line-height;
+}
 
 .dot {font-size: 55px;}
