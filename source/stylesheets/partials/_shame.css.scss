@@ -25,7 +25,11 @@ footer {background-color: $base-bg-color;}
 }
 
 .tracking-4 {letter-spacing: 4px;}
-.tracking-1 {letter-spacing: 1px;}
+.tracking-1 {
+  position: relative;
+  letter-spacing: 1.5px;
+  left: -1px;
+}
 
 section {
   @include outer-container;
