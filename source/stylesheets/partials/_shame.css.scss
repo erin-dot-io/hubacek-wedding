@@ -24,7 +24,7 @@ footer {background-color: $base-bg-color;}
   z-index: 1;
 }
 
-.tracking-4 {letter-spacing: 4px;}
+.tracking-4 {letter-spacing: 3px;}
 .tracking-1 {
   position: relative;
   letter-spacing: 1.5px;
@@ -44,7 +44,7 @@ section {
   }
   @include media($tablet) {
     @include box-sizing(content-box);
-    padding: 0 $base-line-height * 1.5;
+    padding: 0 $base-line-height;
     &.wide {padding: 0 $base-line-height / 2;}
     &.divider {padding: 0 $base-line-height / 2;}
   }
@@ -64,3 +64,16 @@ img {
 }
 
 .dot {font-size: 55px;}
+
+.button {
+  &.submit {
+    display: block;
+    width: 100%;
+    background: #000;
+    color: white;
+    &:not(:disabled) {
+      &:hover {background: tint($dark-gray, 5%);}
+      &:active {background: #000;}
+    }
+  }
+}

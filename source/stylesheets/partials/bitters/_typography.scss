@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
   text-transform: uppercase;
   white-space: nowrap;
+  footer & {
+    color: $base-body-color;
+    @include font-smoothing;
+  }
 }
 
 h1 {
@@ -34,10 +38,6 @@ h3 {
   // letter-spacing: 1px;
   // @include transform(scale(1.2,1));
   // -webkit-text-stroke-width: 1px;
-  footer & {
-    color: $base-body-color;
-    @include font-smoothing;
-  }
 }
 
 h4 {
@@ -125,5 +125,17 @@ cite {
 
   &:before {
     content: '\2014 \00A0';
+  }
+}
+
+footer {
+  @include font-smoothing;
+  a {
+    color: white;
+    text-transform: none;
+  }
+  ul {
+    color: $base-body-color;
+    text-transform: none;
   }
 }
