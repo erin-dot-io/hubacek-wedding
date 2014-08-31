@@ -18,7 +18,7 @@ header {background-color: $alt-bg-color;}
 footer {background-color: $base-bg-color;}
 
 .bottom-border {
-  @include position(absolute, 0 0px 0px 0px);
+  @include position(absolute, null 0px 0px 0px);
   height: 150px;
   background-color: $base-body-color;
   z-index: 1;
@@ -41,6 +41,10 @@ section {
   &.dot-divider {
     margin-top: $base-divider-margin * 0.6;
     margin-bottom: $base-divider-margin;
+  }
+  &.title {
+    margin-top: 0;
+    padding-top: $base-section-margin;
   }
   @include media($tablet) {
     @include box-sizing(content-box);
