@@ -19,6 +19,7 @@ gem "jquery-middleman"
 
 # heroku build stuff
 gem "rack-contrib"
+gem "puma"
 
 # Content managment
 gem "contentful_middleman"

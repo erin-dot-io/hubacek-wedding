@@ -10,7 +10,6 @@ module MarkdownHelper
           :no_intra_emphasis => true,
           :tables => true,
           :fenced_code_blocks => true,
-          :disable_indented_code_blocks => true,
           :filter_html => false,
           :with_toc_data => true
         )

@@ -34,13 +34,20 @@ footer {background-color: $base-bg-color;}
 section {
   @include outer-container;
   text-align: center;
-  padding-top: $base-section-margin;
+  margin-top: $base-section-margin;
   margin-bottom: $base-section-margin;
   &.wide, &.divider {max-width: 55em;}
-  &.divider {margin-bottom: $base-section-margin * .5;}
+  &.divider {
+    margin-bottom: $base-section-margin * .5;
+    padding-top: 1px;
+  }
   &.dot-divider {
     margin-top: $base-divider-margin * 0.6;
     margin-bottom: $base-divider-margin;
+  }
+  &.title, &.rsvp {
+    margin-top: 0;
+    padding-top: $base-section-margin;
   }
   @include media($tablet) {
     @include box-sizing(content-box);
