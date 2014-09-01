@@ -21,5 +21,8 @@ gem "jquery-middleman"
 gem "rack-contrib"
 
 # Content managment
-# gem "contentful_middleman"
-# gem "middleman-blog"
+gem "contentful_middleman"
+gem "middleman-blog"
+
+# Markdown parsing
+gem "redcarpet"

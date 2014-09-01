@@ -55,6 +55,9 @@ set :images_dir, 'images'
 
 set :build_dir, 'tmp'
 
+set :markdown_engine, :redcarpet
+# set :markdown, parse_block_html: true
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -72,3 +75,37 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+# Contentful
+activate :contentful do |f|
+  # The Space ID of your Contentful space
+  f.space = 'dkbd1xopgf8c'
+
+  # The access token (API Key) for the Content Delivery API
+  f.access_token = 'fbaa518778d38d76836a6ee012bc428370bd066f911b04eb6f98422c0b5c7a38'
+
+  # Optional: Options for middleman-blog
+
+  # Filter Entries for your blog posts. See Contentful gem and Content Delivery API documentation.
+  # f.blog_posts_query = {content_type: "6LbnqgnwA08qYaU", category: "news" }
+
+  # Which keys to use in the article template for blog posts
+  # Key: template variable
+  # Value: Entry method or block
+  # f.blog_post_mappings = {
+  #     slug: :id,
+  #     date: :created_at,
+  #     body: :id,
+  #     tags: :tags,
+  #     title: ->(e){"#{e.id}XXXX"}
+  # }
+
+  # Define your own template for blog posts
+  # f.new_article_template = "/my_templates/article.tt"
+
+  # Automatically synchronize blog posts before building with "middleman build"
+  # f.sync_blog_before_build = true # default: false
+end
+
+# require "lib/custom_helpers"
+# helpers MarkdownHelper

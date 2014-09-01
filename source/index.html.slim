@@ -44,43 +44,52 @@ header
       | Because of Hotel Lautner’s residential location, parking cannot be accommodated for the event. We have arranged for shuttles to run throughout the night from downtown Palm Springs. For a list of shuttle times, see the <a href="#schedule">SCHEDULE</a> below.
   section.divider
     hr
-  section#schedule
+  section.markdown#schedule
     h3 SCHEDULE
-    h4 OCTOBER THIRD, <wbr>TWO THOUSAND AND FOURTEEN
-    ul
-      li
-        strong Times and locations TBA
-    ul
-      li
-        strong Early Evening
-      li
-        | Rehearsal Ceremony*
-      li
-        | Rehearsal Dinner*
-    ul
-      li
-        small * wedding party only
-    h4 OCTOBER FOURTH, <wbr>TWO THOUSAND AND FOURTEEN
-    ul
-      li
-        strong Early Evening
-      li
-        | Shuttles leave from Downtown Palm Springs
-    ul
-      li
-        strong Sundown
-      li
-        | Wedding Ceremony
-    ul
-      li
-        strong Evening
-      li
-        | Dinner and Dancing
-    ul
-      li
-        strong Late Evening
-      li
-        | Shuttles return to Downtown Palm Springs
+    - contentful.entries(content_type: '6Bawzi3BYsYOYYwkOkwu4W', order: 'fields.order').each do |entry|
+      h4 = entry.date
+      = markdown do
+        = entry.items
+      ul
+        li
+          small
+            = entry.footnote
+    / hr
+    / h4 OCTOBER THIRD, <wbr>TWO THOUSAND AND FOURTEEN
+    / ul
+    /   li
+    /     strong Times and locations TBA
+    / ul
+    /   li
+    /     strong Early Evening
+    /   li
+    /     | Rehearsal Ceremony*
+    /   li
+    /     | Rehearsal Dinner*
+    / ul
+    /   li
+    /     small * wedding party only
+    / h4 OCTOBER FOURTH, <wbr>TWO THOUSAND AND FOURTEEN
+    / ul
+    /   li
+    /     strong Early Evening
+    /   li
+    /     | Shuttles leave from Downtown Palm Springs
+    / ul
+    /   li
+    /     strong Sundown
+    /   li
+    /     | Wedding Ceremony
+    / ul
+    /   li
+    /     strong Evening
+    /   li
+    /     | Dinner and Dancing
+    / ul
+    /   li
+    /     strong Late Evening
+    /   li
+    /     | Shuttles return to Downtown Palm Springs
   section.divider
     hr
   section

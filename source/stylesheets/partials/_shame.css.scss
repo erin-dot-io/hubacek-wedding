@@ -34,17 +34,13 @@ footer {background-color: $base-bg-color;}
 section {
   @include outer-container;
   text-align: center;
-  margin-top: $base-section-margin;
+  padding-top: $base-section-margin;
   margin-bottom: $base-section-margin;
   &.wide, &.divider {max-width: 55em;}
   &.divider {margin-bottom: $base-section-margin * .5;}
   &.dot-divider {
     margin-top: $base-divider-margin * 0.6;
     margin-bottom: $base-divider-margin;
-  }
-  &.title {
-    margin-top: 0;
-    padding-top: $base-section-margin;
   }
   @include media($tablet) {
     @include box-sizing(content-box);
@@ -132,4 +128,10 @@ img {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.markdown {
+  text-transform: uppercase;
+  p {margin-bottom: 0;}
+  ul {margin-bottom: $base-line-height;}
 }
